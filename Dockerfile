@@ -1,7 +1,7 @@
-FROM openjdk:latest
+FROM maven:alpine
 MAINTAINER Fan Liu
 EXPOSE 8080
-COPY ./target/SubSvc-0.0.1-SNAPSHOT.jar /opt/workspace/
+COPY . /opt/workspace/
 WORKDIR /opt/workspace/
 WORKDIR /
-CMD ["java", "-jar", "/opt/workspace/SubSvc-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/opt/workspace/target/SubSvc-0.0.1-SNAPSHOT.jar"]
