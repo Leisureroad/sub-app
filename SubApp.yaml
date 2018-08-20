@@ -26,6 +26,6 @@ spec:
       containers:
       - name: sub-app
         image: leisureroad/sub-app
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080

@@ -30,8 +30,8 @@ public class SubSvcApplication {
 
 	@RequestMapping("/test-pub-svc")
 	public String foo() {
-		URI uri = UriComponentsBuilder.fromUriString("//pub-svc:8080/").build().toUri();
-		String result = restTemplate.getForObject(uri,String.class);
+//		URI uri = UriComponentsBuilder.fromUriString("//pub-svc:8080/").build().toUri();
+		String result = restTemplate.getForObject("http://pub-svc:8080",String.class);
 		return result;
 	}
 
