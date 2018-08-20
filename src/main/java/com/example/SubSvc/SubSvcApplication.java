@@ -3,7 +3,6 @@ package com.example.SubSvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +24,6 @@ public class SubSvcApplication {
 	RestTemplate restTemplate;
 
 	@Bean
-	@LoadBalanced
 	RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
