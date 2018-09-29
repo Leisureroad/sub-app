@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: pub-sub-vs
+spec:
+  hosts:
+    - pub-svc.default.svc.cluster.local
+    - pub.foo.com
+  http:
+  - route:
+    - destination:
+        host: pub-app
+
